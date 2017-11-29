@@ -1,17 +1,17 @@
-﻿using Microsoft.AspNetCore.Mvc;
-using System.Text.Encodings.Web;
+﻿// For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
 
-// For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+using Microsoft.AspNetCore.Mvc;
+using System.Text.Encodings.Web;
 
 namespace MVCMovieCore2.Controllers
 {
     public class HelloWorld : Controller
     {
         // GET: /<controller>/
-        public string Index()
+        public IActionResult Index()
         {
             
-            return "Esta é minha visão padrão"; 
+            return View(); 
         }
 
         public string Welcome(string name, int ID = 1)
